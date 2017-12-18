@@ -52,6 +52,7 @@
 <script src="static/js/jquery-ui.min.js"></script>
 <script>$.widget.bridge('uibutton', $.ui.button);</script>
 <script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/select2.full.min.js"></script>
 <script src="static/js/bootstrap-datepicker.min.js"></script>
 <script src="static/js/bootstrap3-wysihtml5.all.min.js"></script>
 <script src="static/js/jquery.slimscroll.min.js"></script>

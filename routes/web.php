@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect(route('request_create'));
+    return route('request_create');
 })->name('dashboard');
 
 Route::get('/create', function () {
@@ -30,6 +30,10 @@ Route::get('/create', function () {
             ]
         ]);
 })->name('request_create');
+
+Route::post('/create', function () {
+    return redirect(route('dashboard'));
+})->name('request_create_post');
 
 Route::get('/logout', function () {
     return 'logout';
