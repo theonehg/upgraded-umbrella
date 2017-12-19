@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/css/select2.min.css">
-    <link rel="stylesheet" href="static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="static/css/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="static/css/AdminLTE.min.css">
     <link rel="stylesheet" href="static/css/AdminLTE.skin-blue.min.css">
@@ -54,7 +54,7 @@
 <script>$.widget.bridge('uibutton', $.ui.button);</script>
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/select2.full.min.js"></script>
-<script src="static/js/bootstrap-datepicker.min.js"></script>
+<script src="static/js/bootstrap-datetimepicker.min.js"></script>
 <script src="static/js/bootstrap3-wysihtml5.all.min.js"></script>
 <script src="static/js/jquery.slimscroll.min.js"></script>
 <script src="static/js/adminlte.min.js"></script>

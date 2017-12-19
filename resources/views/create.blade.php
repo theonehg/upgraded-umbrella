@@ -18,7 +18,7 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label class="required" for="request_subject">Request Subject</label>
-                                <input type="text" class="form-control" id="request_subject" name="subject" required>
+                                <input type="text" class="form-control input-lg" id="request_subject" name="subject" required>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6 col-xs-12">
@@ -38,7 +38,7 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" id="request_deadline" name="deadline_at">
+                                            <input type="text" class="form-control pull-right" id="request_deadline" name="deadline_at" data-date-format="yyyy-mm-dd hh:ii">
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
 @section('main.script')
     <script>
         $(function () {
-            $('#request_deadline').datepicker({autoclose: true})
+            $('#request_deadline').datetimepicker({autoclose: true})
             $('#request_relater').select2();
             $('#request_content').wysihtml5();
         });
