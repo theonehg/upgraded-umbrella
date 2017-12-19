@@ -10,10 +10,11 @@
 
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/css/AdminLTE.min.css">
-    <link rel="stylesheet" href="static/css/AdminLTE.skin-blue.min.css">
+    <link rel="stylesheet" href="static/css/select2.min.css">
     <link rel="stylesheet" href="static/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="static/css/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="static/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="static/css/AdminLTE.skin-blue.min.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>

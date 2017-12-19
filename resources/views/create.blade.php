@@ -18,17 +18,17 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label class="required" for="request_subject">Request Subject</label>
-                                <input type="email" class="form-control" id="request_subject" name="subject" required>
+                                <input type="text" class="form-control" id="request_subject" name="subject" required>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="request_priority">Priority</label>
-                                        {{--<select class="form-control" id="request_priority" name="priority_id">--}}
-                                            {{--@foreach($priorities as $priority)--}}
-                                                {{--<option value="{{ $priority->id }}">{{ $priority->priority }}</option>--}}
-                                            {{--@endforeach--}}
-                                        {{--</select>--}}
+                                        <select class="form-control" id="request_priority" name="priority_id">
+                                            @foreach($priorities as $priority)
+                                                <option value="{{ $priority->id }}">{{ $priority->priority }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -47,28 +47,21 @@
                                 <div class="col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label class="required" for="request_location">Location</label>
-                                        {{--<select class="form-control" id="request_location" name="department_id">--}}
-                                            {{--@foreach($departments as $department)--}}
-                                                {{--<option value="{{ $department->id }}">{{ $department->department }}</option>--}}
-                                            {{--@endforeach--}}
-                                        {{--</select>--}}
+                                        <select class="form-control" id="request_location" name="department_id">
+                                            @foreach($departments as $department)
+                                                <option value="{{ $department->id }}">{{ $department->department }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
                                     <div class="form-group">
-                                        <label>Multiple</label>
-                                        <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width:100%;">
-                                            <option>Alabama</option>
-                                            <option>Alaska</option>
-                                            <option>California</option>
-                                            <option>Delaware</option>
-                                            <option>Tennessee</option>
-                                            <option>Texas</option>
-                                            <option>Washington</option>
+                                        <label for="request_relater">Relater</label>
+                                        <select class="form-control select2" id="request_relater" name="relater" multiple="multiple" style="width:100%;">
+                                            @foreach($users as $user)
+                                                <option value="{{ $user->id }}">{{ $user->fullname }}</option>
+                                            @endforeach
                                         </select>
-                                        {{--<div class="form-group">--}}
-                                        {{--<label for="request_subject">Relater</label>--}}
-                                        {{--<input type="email" class="form-control" id="request_subject">--}}
                                     </div>
                                 </div>
                             </div>
@@ -105,8 +98,9 @@
 @section('main.script')
     <script>
         $(function () {
-            $("#request_content").wysihtml5();
             $('#request_deadline').datepicker({autoclose: true})
+            $('#request_relater').select2();
+            $('#request_content').wysihtml5();
         });
     </script>
 @endsection
