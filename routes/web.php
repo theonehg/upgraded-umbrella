@@ -18,15 +18,94 @@ Route::get('/', function () {
 Route::get('/create', function () {
     return view('create',
         [
-            'user' => (object)[
-                'id' => 'user_id',
-                'avatar' => '#',
-                'fullname' => 'Mai Thanh Minh',
-                'title' => 'Meo Meo Meo',
-                'username' => 'thanhminhmr',
+            'loggedUser' => (object)[
+                'id' => 1,
                 'email' => 'thanhminhmr@gmail.com',
-                'team_id' => 'team_id',
-                'position_id' => 'position_id'
+                'name' => 'Mai Thanh Minh',
+                'team_id' => 102,
+                'position_id' => 402
+            ],
+            'users' => [
+                (object)[
+                    'id' => 1,
+                    'name' => 'Mai Thanh Minh'
+                ],
+                (object)[
+                    'id' => 2,
+                    'name' => 'User Name One'
+                ],
+                (object)[
+                    'id' => 3,
+                    'name' => 'User Name Two'
+                ],
+                (object)[
+                    'id' => 4,
+                    'name' => 'User Name Three'
+                ],
+                (object)[
+                    'id' => 5,
+                    'name' => 'User Name Four'
+                ]
+            ],
+            'teams' => [
+                (object)[
+                    'id' => 101,
+                    'name' => 'Team Name One'
+                ],
+                (object)[
+                    'id' => 102,
+                    'name' => 'Team Name Two'
+                ],
+                (object)[
+                    'id' => 103,
+                    'name' => 'Team Name Three'
+                ],
+                (object)[
+                    'id' => 104,
+                    'name' => 'Team Name Four'
+                ]
+            ],
+            'priorities' => [
+                (object)[
+                    'id' => 201,
+                    'name' => 'Low'
+                ],
+                (object)[
+                    'id' => 202,
+                    'name' => 'Medium'
+                ],
+                (object)[
+                    'id' => 203,
+                    'name' => 'High'
+                ],
+                (object)[
+                    'id' => 204,
+                    'name' => 'Critical'
+                ]
+            ],
+            'departments' => [
+                (object)[
+                    'id' => 301,
+                    'name' => 'Hanoi'
+                ],
+                (object)[
+                    'id' => 302,
+                    'name' => 'Danang'
+                ]
+            ],
+            'positions' => [
+                (object)[
+                    'id' => 401,
+                    'name' => 'Member'
+                ],
+                (object)[
+                    'id' => 402,
+                    'name' => 'Sub-Leader'
+                ],
+                (object)[
+                    'id' => 403,
+                    'name' => 'Leader'
+                ]
             ]
         ]);
 })->name('request_create');

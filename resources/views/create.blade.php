@@ -26,7 +26,7 @@
                                         <label for="request_priority">Priority</label>
                                         <select class="form-control" id="request_priority" name="priority_id">
                                             @foreach($priorities as $priority)
-                                                <option value="{{ $priority->id }}">{{ $priority->priority }}</option>
+                                                <option value="{{ $priority->id }}">{{ $priority->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -38,7 +38,7 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" id="request_deadline" name="deadline">
+                                            <input type="text" class="form-control pull-right" id="request_deadline" name="deadline_at">
                                         </div>
                                     </div>
                                 </div>
@@ -46,20 +46,20 @@
                             <div class="row">
                                 <div class="col-sm-6 col-xs-12">
                                     <div class="form-group">
-                                        <label class="required" for="request_location">Location</label>
+                                        <label class="required" for="request_location">Department</label>
                                         <select class="form-control" id="request_location" name="department_id">
                                             @foreach($departments as $department)
-                                                <option value="{{ $department->id }}">{{ $department->department }}</option>
+                                                <option value="{{ $department->id }}">{{ $department->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
                                     <div class="form-group">
-                                        <label for="request_relater">Relater</label>
+                                        <label for="request_relater">Relater(s)</label>
                                         <select class="form-control select2" id="request_relater" name="relater" multiple="multiple" style="width:100%;">
                                             @foreach($users as $user)
-                                                <option value="{{ $user->id }}">{{ $user->fullname }}</option>
+                                                <option value="{{ $user->id }}">{{ $user->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
