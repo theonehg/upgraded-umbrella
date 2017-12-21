@@ -10,10 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//test
 
-Route::get('/', function () {
-    return route('request_create');
-})->name('dashboard');
+Route::get('/login', function () {
+    return view('login');
+});
 
 Route::get('/create', function () {
     return view('create',
@@ -84,29 +85,29 @@ Route::get('/create', function () {
                 ]
             ],
             'departments' => [
-                (object)[
-                    'id' => 301,
-                    'name' => 'Hanoi'
-                ],
-                (object)[
-                    'id' => 302,
-                    'name' => 'Danang'
-                ]
-            ],
+        (object)[
+            'id' => 301,
+            'name' => 'Hanoi'
+        ],
+        (object)[
+            'id' => 302,
+            'name' => 'Danang'
+        ]
+    ],
             'positions' => [
-                (object)[
-                    'id' => 401,
-                    'name' => 'Member'
-                ],
-                (object)[
-                    'id' => 402,
-                    'name' => 'Sub-Leader'
-                ],
-                (object)[
-                    'id' => 403,
-                    'name' => 'Leader'
-                ]
-            ]
+        (object)[
+            'id' => 401,
+            'name' => 'Member'
+        ],
+        (object)[
+            'id' => 402,
+            'name' => 'Sub-Leader'
+        ],
+        (object)[
+            'id' => 403,
+            'name' => 'Leader'
+        ]
+    ]
         ]);
 })->name('request_create');
 
@@ -212,13 +213,7 @@ Route::post('/create', function () {
 Route::post('/comment', function () {
     return redirect(route('dashboard'));
 })->name('request_comment_post');
-
-Route::get('/logout', function () {
-    return 'logout';
-})->name('logout');
-
 Route::get('/list', function () {
     return 'list';
 })->name('request_list');
-
 
