@@ -23,7 +23,7 @@
 
 @section('main.content')
     <section class="content">
-        <form method="post" action="{{ route('request_create_post') }}">
+        <form method="post" action="{{ route('create_post') }}">
             <div class="box box-primary box-solid">
                 <div class="box-header with-border">
                     <h3 class="box-title">Create Request</h3>
@@ -48,10 +48,8 @@
                             <div class="form-group">
                                 <label class="required" for="request_deadline">Deadline</label>
                                 <div class="input-group date">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input type="text" class="form-control pull-right" id="request_deadline" name="deadline_at" data-date-format="yyyy-mm-dd hh:ii">
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                    <input type="text" class="form-control pull-right" id="request_deadline" name="deadline_at" data-date-format="yyyy-mm-dd hh:ii:ss">
                                 </div>
                             </div>
                         </div>

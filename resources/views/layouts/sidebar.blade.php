@@ -1,7 +1,7 @@
 <section class="sidebar">
     <ul class="sidebar-menu" data-widget="tree">
         <li>
-            <a class="bg-red" href="{{ route('request_create') }}">
+            <a class="bg-red" href="{{ route('create') }}">
                 <i class="fa fa-pencil-square-o"></i>
                 <span>Create Request</span>
             </a>
@@ -22,7 +22,7 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ route('request_list', ['createdBy' => $loggedUser->id]) }}">
+                    <a href="{{ route('list', ['createdBy' => $loggedUser->id]) }}">
                         <i class="fa fa-archive"></i>
                         <span>All</span>
                         <span class="pull-right-container">
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['createdBy' => $loggedUser->id, 'read' => false]) }}">
+                    <a href="{{ route('list', ['createdBy' => $loggedUser->id, 'read' => false]) }}">
                         <i class="fa fa-bell-o"></i>
                         <span>New</span>
                         <span class="pull-right-container">
@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['createdBy' => $loggedUser->id, 'status' => 'inProgress']) }}">
+                    <a href="{{ route('list', ['createdBy' => $loggedUser->id, 'status' => 'inProgress']) }}">
                         <i class="fa fa-cogs"></i>
                         <span>In Progress</span>
                         <span class="pull-right-container">
@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['createdBy' => $loggedUser->id, 'status' => 'resolved']) }}">
+                    <a href="{{ route('list', ['createdBy' => $loggedUser->id, 'status' => 'resolved']) }}">
                         <i class="fa fa-check-square-o"></i>
                         <span>Resolved</span>
                         <span class="pull-right-container">
@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['createdBy' => $loggedUser->id, 'outdated' => true]) }}">
+                    <a href="{{ route('list', ['createdBy' => $loggedUser->id, 'outdated' => true]) }}">
                         <i class="fa fa-calendar-times-o"></i>
                         <span>Outdated</span>
                         <span class="pull-right-container">
@@ -78,7 +78,7 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ route('request_list', ['relatedTo' => $loggedUser->id]) }}">
+                    <a href="{{ route('list', ['relatedTo' => $loggedUser->id]) }}">
                         <i class="fa fa-archive"></i>
                         <span>All</span>
                         <span class="pull-right-container">
@@ -87,7 +87,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['relatedTo' => $loggedUser->id, 'read' => false]) }}">
+                    <a href="{{ route('list', ['relatedTo' => $loggedUser->id, 'read' => false]) }}">
                         <i class="fa fa-bell-o"></i>
                         <span>New</span>
                         <span class="pull-right-container">
@@ -96,7 +96,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['relatedTo' => $loggedUser->id, 'status' => 'inProgress']) }}">
+                    <a href="{{ route('list', ['relatedTo' => $loggedUser->id, 'status' => 'inProgress']) }}">
                         <i class="fa fa-cogs"></i>
                         <span>In Progress</span>
                         <span class="pull-right-container">
@@ -105,7 +105,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['relatedTo' => $loggedUser->id, 'status' => 'resolved']) }}">
+                    <a href="{{ route('list', ['relatedTo' => $loggedUser->id, 'status' => 'resolved']) }}">
                         <i class="fa fa-check-square-o"></i>
                         <span>Resolved</span>
                         <span class="pull-right-container">
@@ -114,7 +114,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['relatedTo' => $loggedUser->id, 'outdated' => true]) }}">
+                    <a href="{{ route('list', ['relatedTo' => $loggedUser->id, 'outdated' => true]) }}">
                         <i class="fa fa-calendar-times-o"></i>
                         <span>Outdated</span>
                         <span class="pull-right-container">
@@ -134,7 +134,7 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ route('request_list', ['assignedTo' => $loggedUser->id]) }}">
+                    <a href="{{ route('list', ['assignedTo' => $loggedUser->id]) }}">
                         <i class="fa fa-archive"></i>
                         <span>All</span>
                         <span class="pull-right-container">
@@ -143,7 +143,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['assignedTo' => $loggedUser->id, 'read' => false]) }}">
+                    <a href="{{ route('list', ['assignedTo' => $loggedUser->id, 'read' => false]) }}">
                         <i class="fa fa-bell-o"></i>
                         <span>New</span>
                         <span class="pull-right-container">
@@ -152,7 +152,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['assignedTo' => $loggedUser->id, 'status' => 'inProgress']) }}">
+                    <a href="{{ route('list', ['assignedTo' => $loggedUser->id, 'status' => 'inProgress']) }}">
                         <i class="fa fa-cogs"></i>
                         <span>In Progress</span>
                         <span class="pull-right-container">
@@ -161,7 +161,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['assignedTo' => $loggedUser->id, 'status' => 'resolved']) }}">
+                    <a href="{{ route('list', ['assignedTo' => $loggedUser->id, 'status' => 'resolved']) }}">
                         <i class="fa fa-check-square-o"></i>
                         <span>Resolved</span>
                         <span class="pull-right-container">
@@ -170,7 +170,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['assignedTo' => $loggedUser->id, 'outdated' => true]) }}">
+                    <a href="{{ route('list', ['assignedTo' => $loggedUser->id, 'outdated' => true]) }}">
                         <i class="fa fa-calendar-times-o"></i>
                         <span>Outdated</span>
                         <span class="pull-right-container">
@@ -190,7 +190,7 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ route('request_list', ['team' => $loggedUser->team_id]) }}">
+                    <a href="{{ route('list', ['team' => $loggedUser->team_id]) }}">
                         <i class="fa fa-archive"></i>
                         <span>All</span>
                         <span class="pull-right-container">
@@ -199,7 +199,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['team' => $loggedUser->team_id, 'read' => false]) }}">
+                    <a href="{{ route('list', ['team' => $loggedUser->team_id, 'read' => false]) }}">
                         <i class="fa fa-bell-o"></i>
                         <span>New</span>
                         <span class="pull-right-container">
@@ -208,7 +208,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['team' => $loggedUser->team_id, 'status' => 'inProgress']) }}">
+                    <a href="{{ route('list', ['team' => $loggedUser->team_id, 'status' => 'inProgress']) }}">
                         <i class="fa fa-cogs"></i>
                         <span>In Progress</span>
                         <span class="pull-right-container">
@@ -217,7 +217,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['team' => $loggedUser->team_id, 'status' => 'resolved']) }}">
+                    <a href="{{ route('list', ['team' => $loggedUser->team_id, 'status' => 'resolved']) }}">
                         <i class="fa fa-check-square-o"></i>
                         <span>Resolved</span>
                         <span class="pull-right-container">
@@ -226,7 +226,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['team' => $loggedUser->team_id, 'outdated' => true]) }}">
+                    <a href="{{ route('list', ['team' => $loggedUser->team_id, 'outdated' => true]) }}">
                         <i class="fa fa-calendar-times-o"></i>
                         <span>Outdated</span>
                         <span class="pull-right-container">
@@ -246,7 +246,7 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a href="{{ route('request_list') }}">
+                    <a href="{{ route('list') }}">
                         <i class="fa fa-archive"></i>
                         <span>All</span>
                         <span class="pull-right-container">
@@ -255,7 +255,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['read' => false]) }}">
+                    <a href="{{ route('list', ['read' => false]) }}">
                         <i class="fa fa-bell-o"></i>
                         <span>New</span>
                         <span class="pull-right-container">
@@ -264,7 +264,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['status' => 'inProgress']) }}">
+                    <a href="{{ route('list', ['status' => 'inProgress']) }}">
                         <i class="fa fa-cogs"></i>
                         <span>In Progress</span>
                         <span class="pull-right-container">
@@ -273,7 +273,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['status' => 'resolved']) }}">
+                    <a href="{{ route('list', ['status' => 'resolved']) }}">
                         <i class="fa fa-check-square-o"></i>
                         <span>Resolved</span>
                         <span class="pull-right-container">
@@ -282,7 +282,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('request_list', ['outdated' => true]) }}">
+                    <a href="{{ route('list', ['outdated' => true]) }}">
                         <i class="fa fa-calendar-times-o"></i>
                         <span>Outdated</span>
                         <span class="pull-right-container">
